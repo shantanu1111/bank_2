@@ -1,0 +1,1813 @@
+/* Custom Styles for DCB Bank Website */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-container button {
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -100px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    min-width: 1100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    margin-top: 8px;
+}
+
+.dropdown-menu-2col {
+    min-width: 700px;
+    left: -150px;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Responsive Dropdown */
+@media (max-width: 1024px) {
+    .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 90vw;
+        max-width: 600px;
+    }
+    
+    .dropdown-menu-2col {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 90vw;
+        max-width: 600px;
+    }
+}
+
+/* Login Dropdown Styles */
+.login-dropdown-container {
+    position: relative;
+}
+
+.login-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #fffef0;
+    border: 3px solid #fbbf24;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    min-width: 320px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.login-dropdown-container:hover .login-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-dropdown-menu a {
+    transition: background-color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .login-dropdown-menu {
+        right: -20px;
+        min-width: 280px;
+    }
+}
+
+.dropdown-menu h3 {
+    color: #1e3a8a;
+}
+
+.dropdown-menu ul li a {
+    color: #374151;
+    transition: color 0.2s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+/* Hero Section Animation */
+.hero-section {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card Hover Effects */
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Mobile Menu Styles */
+#mobileMenu {
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.mobile-accordion svg {
+    transition: transform 0.3s ease;
+}
+
+.mobile-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-accordion-content:not(.hidden) {
+    max-height: 500px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Button Styles */
+button, .btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+}
+
+button:active, .btn:active {
+    transform: translateY(0);
+}
+
+/* Navigation Hover Effects */
+nav a:hover {
+    color: #1e3a8a;
+}
+
+/* Fixed Side Icons */
+.fixed-side-icons button {
+    transition: all 0.3s ease;
+}
+
+.fixed-side-icons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Notification Banner */
+.notification-banner {
+    background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%);
+}
+
+/* Login Button Special Style */
+.login-button {
+    background: transparent;
+    border: 2px solid #fbbf24;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background: #fbbf24;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+/* Product Cards Grid */
+.product-cards-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .product-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Hero Image Overlay */
+.hero-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(254, 252, 232, 0.3), rgba(220, 252, 231, 0.3));
+    pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Dropdown Arrow Animation */
+.dropdown-container button svg {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-container:hover button svg {
+    transform: rotate(180deg);
+}
+
+/* Fade In Animation for Cards */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    animation: cardFadeIn 0.6s ease forwards;
+}
+
+.product-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.product-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Gradient Background for Hero */
+.hero-gradient {
+    background: linear-gradient(135deg, #fef3c7 0%, #fef9c3 25%, #ecfccb 50%, #d1fae5 75%, #a7f3d0 100%);
+}
+
+/* Icon Hover Effect */
+.icon-hover {
+    transition: all 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.15);
+    color: #1e3a8a;
+}
+
+/* Secondary Navigation Background */
+.secondary-nav {
+    background: linear-gradient(to bottom, #dbeafe, #e0e7ff);
+}
+
+/* Mobile Menu Overlay */
+#mobileMenu {
+    backdrop-filter: blur(8px);
+}
+
+/* Focus Styles for Accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+}
+
+/* Dropdown Image Hover */
+.dropdown-menu img {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Selection */
+::selection {
+    background: #fbbf24;
+    color: #1e3a8a;
+}
+
+/* Link Underline Effect */
+.dropdown-menu ul li a {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.dropdown-menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1e3a8a;
+    transition: width 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* Notification Banner Slide In */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.notification-banner {
+    animation: slideDown 0.5s ease;
+}
+
+/* Button Ripple Effect */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Mobile Menu Transition */
+#mobileMenu {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Card Shadow Enhancement */
+.shadow-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth Transitions */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .dropdown-menu {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* Social Security Schemes Section */
+.social-security-scheme-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-security-scheme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Scheme Icons Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.scheme-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive Grid for Schemes */
+@media (max-width: 768px) {
+    .social-security-scheme-card {
+        padding: 1rem;
+    }
+}
+
+
+
+/* Account Type Cards Section */
+.account-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.account-card:hover {
+    transform: translateY(-8px);
+}
+
+.account-card .icon-wrapper {
+    transition: transform 0.3s ease;
+}
+
+.account-card:hover .icon-wrapper {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Interest Rate Animation */
+@keyframes pulse-rate {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.account-card:hover .text-xl {
+    animation: pulse-rate 1s ease-in-out infinite;
+}
+
+/* Card Shadow Depth */
+.account-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.account-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+
+/* Product Cards Carousel Section */
+.carousel-container {
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-out;
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-prev,
+.carousel-next {
+    transition: all 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-prev {
+    transform: translateY(-50%) translateX(-1rem);
+}
+
+.carousel-next {
+    transform: translateY(-50%) translateX(1rem);
+}
+
+/* Carousel Dots */
+.carousel-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot:hover {
+    transform: scale(1.2);
+}
+
+.carousel-dot.active {
+    background-color: #1e3a8a;
+    width: 2rem;
+}
+
+/* Card Hover Effects */
+.carousel-slide .bg-white {
+    transition: all 0.4s ease;
+}
+
+.carousel-slide:hover .bg-white {
+    transform: translateY(-5px);
+}
+
+.carousel-slide img {
+    transition: transform 0.4s ease;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-prev,
+    .carousel-next {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .carousel-prev {
+        left: -0.5rem;
+    }
+    
+    .carousel-next {
+        right: -0.5rem;
+    }
+}
+
+
+/* last added */
+
+
+/* Calculators Section */
+.calculator-tab-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator-tab-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #1e3a8a;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.calculator-tab-btn.active {
+    background: #dbeafe;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.calculator-tab-btn.active::before {
+    transform: scaleY(1);
+}
+
+.calculator-content {
+    animation: fadeInUp 0.5s ease;
+}
+
+.calculator-content.hidden {
+    display: none;
+}
+
+.calculator-content.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input Focus Effects */
+.calculator-content input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Button Ripple Effect */
+.calculate-btn,
+.calculate-emi-btn,
+.calculate-business-emi-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.calculate-btn::after,
+.calculate-emi-btn::after,
+.calculate-business-emi-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.calculate-btn:active::after,
+.calculate-emi-btn:active::after,
+.calculate-business-emi-btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Result Animation */
+.calculator-content .text-3xl,
+.calculator-content .text-2xl {
+    transition: all 0.3s ease;
+}
+
+.result-updated {
+    animation: resultPulse 0.5s ease;
+}
+
+@keyframes resultPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        color: #059669;
+    }
+}
+
+/* Sticky Sidebar */
+@media (min-width: 1024px) {
+    .sticky {
+        position: sticky;
+        top: 1rem;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .calculator-tab-btn {
+        font-size: 0.875rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    .calculator-content .text-2xl {
+        font-size: 1.5rem;
+    }
+    
+    .calculator-content .text-3xl {
+        font-size: 1.75rem;
+    }
+}
+
+/* Calculator Header Underline Animation */
+.calculator-content h3 + .w-12 {
+    animation: expandWidth 0.5s ease;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 3rem;
+    }
+}
+
+
+/* Feature Cards Section */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+/* Image Zoom Effect */
+.feature-card img {
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feature-card:hover img {
+    transform: scale(1.15);
+}
+
+/* Content Slide Up Effect */
+.feature-card .relative > div {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Icon Pulse Animation */
+.feature-card .w-12.h-12 {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+
+.feature-card:hover .w-12.h-12 {
+    animation: none;
+    transform: scale(1.1);
+}
+
+/* Button Hover Effect */
+.feature-card button {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card button:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Arrow Animation */
+.feature-card button svg {
+    transition: transform 0.3s ease;
+}
+
+.feature-card button:hover svg {
+    transform: translateX(4px);
+}
+
+/* Gradient Overlay Animation */
+.feature-card .absolute.inset-0 {
+    transition: background 0.5s ease;
+}
+
+.feature-card:hover .absolute.inset-0 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+}
+
+/* Text Shadow for Better Readability */
+.feature-card h3 {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover h3 {
+    transform: translateY(-5px);
+}
+
+/* Card Border Glow Effect */
+.feature-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .feature-card {
+        height: 20rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .feature-card .w-12.h-12 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .feature-card .w-12.h-12 svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Loading State */
+.feature-card img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.feature-card img[src] {
+    animation: none;
+    background: none;
+}
+
+
+/* Corporate Social Responsibility Section */
+.csr-section {
+    position: relative;
+}
+
+/* Stats Items Animation */
+.csr-section .flex.items-start {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.csr-section .flex.items-start:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.csr-section .flex.items-start:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.csr-section .flex.items-start:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.csr-section .flex.items-start:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.csr-section .flex.items-start:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Icon Hover Effects */
+.csr-section .w-12.h-12 {
+    transition: all 0.3s ease;
+}
+
+.csr-section .flex.items-start:hover .w-12.h-12 {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Number Counter Animation */
+.csr-section h3 {
+    transition: color 0.3s ease;
+}
+
+.csr-section .flex.items-start:hover h3 {
+    color: #1e3a8a;
+}
+
+/* Floating Badge Animation */
+.csr-section .absolute.top-8 {
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Image Overlay Effect */
+.csr-section .relative.h-64 img {
+    transition: transform 0.5s ease;
+}
+
+.csr-section:hover .relative.h-64 img {
+    transform: scale(1.05);
+}
+
+/* Gradient Background Animation */
+.csr-section > div {
+    position: relative;
+    overflow: hidden;
+}
+
+.csr-section > div::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    animation: rotateGradient 15s linear infinite;
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Stats Highlight Effect */
+.csr-section .flex.items-start {
+    position: relative;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.csr-section .flex.items-start:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateX(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effect */
+.csr-section button {
+    position: relative;
+    overflow: hidden;
+}
+
+.csr-section button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.csr-section button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.csr-section button svg {
+    transition: transform 0.3s ease;
+}
+
+.csr-section button:hover svg {
+    transform: translateX(5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .csr-section h2 {
+        font-size: 1.875rem;
+    }
+    
+    .csr-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .csr-section .w-12.h-12 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .csr-section .absolute.top-8 {
+        top: 1rem;
+        right: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .csr-section .space-y-6 {
+        gap: 1rem;
+    }
+    
+    .csr-section .flex.items-start {
+        padding: 0.5rem;
+    }
+}
+
+/* Loading Skeleton */
+.csr-section .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+/* Accessibility Focus States */
+.csr-section button:focus {
+    outline: 3px solid #fbbf24;
+    outline-offset: 3px;
+}
+
+/* Print Styles */
+@media print {
+    .csr-section button {
+        display: none;
+    }
+}
+
+
+
+
+
+/* Trends & Blogs Section */
+.trends-blogs-section {
+    position: relative;
+}
+
+/* Section Header Animation */
+.trends-blogs-section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.trends-blogs-section .w-16 {
+    animation: expandWidth 0.8s ease;
+}
+
+/* Featured Blog Card */
+.featured-blog {
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-blog::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.featured-blog:hover::before {
+    opacity: 1;
+}
+
+.featured-blog > div {
+    position: relative;
+    z-index: 2;
+}
+
+/* Category Badge Animation */
+.featured-blog span,
+.blog-item span {
+    transition: all 0.3s ease;
+}
+
+.featured-blog:hover span {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Item Hover Effects */
+.blog-item {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.blog-item:hover {
+    border-color: #3b82f6;
+    transform: translateX(10px);
+}
+
+/* Blog Item Image Zoom */
+.blog-item img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.blog-item:hover img {
+    transform: scale(1.15);
+}
+
+/* Blog Title Hover Effect */
+.blog-item h4 {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.blog-item h4::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1e3a8a;
+    transition: width 0.3s ease;
+}
+
+.blog-item:hover h4::after {
+    width: 100%;
+}
+
+/* Badge Color Variations */
+.badge-banking {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.badge-savings {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.badge-loan {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.badge-security {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* View All Button */
+.trends-blogs-section > div > button {
+    position: relative;
+    overflow: hidden;
+}
+
+.trends-blogs-section > div > button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.trends-blogs-section > div > button:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+/* Featured Blog Button Animation */
+.featured-blog button {
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.featured-blog:hover button {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.featured-blog button svg {
+    transition: transform 0.3s ease;
+}
+
+.featured-blog button:hover svg {
+    transform: translateX(5px);
+}
+
+/* Staggered Animation for Blog Items */
+.blog-item:nth-child(1) {
+    animation: fadeInRight 0.6s ease 0.1s both;
+}
+
+.blog-item:nth-child(2) {
+    animation: fadeInRight 0.6s ease 0.2s both;
+}
+
+.blog-item:nth-child(3) {
+    animation: fadeInRight 0.6s ease 0.3s both;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Read More Link Animation */
+.blog-item p {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.blog-item:hover p {
+    color: #1e3a8a;
+}
+
+.blog-item p::after {
+    content: '→';
+    margin-left: 8px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.blog-item:hover p::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Image Overlay on Hover */
+.blog-item .overflow-hidden::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blog-item:hover .overflow-hidden::after {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .featured-blog h3 {
+        font-size: 1.5rem;
+    }
+    
+    .blog-item h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .featured-blog {
+        height: 24rem;
+    }
+    
+    .blog-item {
+        transform: none !important;
+    }
+    
+    .blog-item:hover {
+        transform: translateY(-5px) !important;
+    }
+    
+    .blog-item .sm\:w-40 {
+        width: 100%;
+        height: 12rem;
+    }
+}
+
+/* Loading State */
+.blog-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+/* Accessibility */
+.blog-item:focus-within {
+    outline: 3px solid #fbbf24;
+    outline-offset: 3px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .blog-item {
+        background: #1f2937;
+    }
+    
+    .blog-item h4 {
+        color: #f9fafb;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .trends-blogs-section button {
+        display: none;
+    }
+    
+    .blog-item:hover {
+        transform: none;
+    }
+}
+
+
+
+
+/* Footer Section */
+footer {
+    position: relative;
+}
+
+/* Footer Links Hover Effect */
+footer a {
+    position: relative;
+    display: inline-block;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #1e3a8a;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* Contact Bar Animation */
+.contact-bar {
+    animation: slideDown 0.5s ease;
+}
+
+/* Footer Headings */
+footer h3 {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #fbbf24;
+}
+
+/* Social Media Icons */
+footer .w-10.h-10 {
+    transition: all 0.3s ease;
+}
+
+footer .w-10.h-10:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* App Download Buttons */
+footer img[alt*="Store"] {
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+footer img[alt*="Store"]:hover {
+    transform: scale(1.05);
+}
+
+/* Certification Badges */
+footer img[alt*="Certified"] {
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+footer img[alt*="Certified"]:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Responsive Footer Grid */
+@media (max-width: 768px) {
+    footer .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    footer h3 {
+        font-size: 0.875rem;
+    }
+    
+    footer a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    footer .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    footer .contact-bar .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Column Fade In */
+footer .grid > div {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+footer .grid > div:nth-child(1) { animation-delay: 0.1s; }
+footer .grid > div:nth-child(2) { animation-delay: 0.15s; }
+footer .grid > div:nth-child(3) { animation-delay: 0.2s; }
+footer .grid > div:nth-child(4) { animation-delay: 0.25s; }
+footer .grid > div:nth-child(5) { animation-delay: 0.3s; }
+footer .grid > div:nth-child(6) { animation-delay: 0.35s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Divider Lines */
+footer .border-y {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact Info Icons */
+footer svg {
+    transition: transform 0.3s ease;
+}
+
+footer .flex.items-center:hover svg {
+    transform: scale(1.2);
+}
+
+/* Legal Links Separator */
+footer span {
+    color: #9ca3af;
+}
+
+/* Gradient Background for Social Section */
+.bg-blue-900 {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+/* Hover Effect for Footer Sections */
+footer .grid > div {
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+footer .grid > div:hover {
+    background: rgba(59, 130, 246, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Copyright Section */
+footer .bg-gray-100 {
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Smooth Scroll to Top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Print Styles */
+@media print {
+    footer .bg-blue-900,
+    footer .scroll-to-top {
+        display: none;
+    }
+}
+
+/* Accessibility - Focus States */
+footer a:focus,
+footer button:focus {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Loading Animation for Images */
+footer img {
+    loading: lazy;
+}
+
+
+/* Hero Carousel Section */
+.hero-carousel-container {
+    position: relative;
+}
+
+.hero-carousel-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-slide {
+    flex: 0 0 100%;
+}
+
+/* Hero Navigation Arrows */
+.hero-prev,
+.hero-next {
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.hero-prev:hover,
+.hero-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Dots */
+.hero-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-dot:hover {
+    transform: scale(1.2);
+}
+
+.hero-dot.active {
+    background-color: #1e3a8a;
+    width: 2rem;
+}
+
+/* Hero Content Animation */
+.hero-slide h1 {
+    animation: slideInLeft 0.8s ease;
+}
+
+.hero-slide p {
+    animation: slideInLeft 0.8s ease 0.2s both;
+}
+
+.hero-slide .flex.flex-wrap {
+    animation: slideInLeft 0.8s ease 0.4s both;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hero Image Animation */
+.hero-slide img {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button Layout - Side by Side on Mobile */
+.hero-slide .flex.flex-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.hero-slide .flex.flex-wrap button {
+    flex: 0 1 auto;
+    white-space: nowrap;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .hero-slide h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-slide p {
+        font-size: 1rem;
+    }
+    
+    .hero-slide .flex.flex-wrap {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+    
+    .hero-slide .flex.flex-wrap button {
+        padding: 0.625rem 1.5rem;
+        font-size: 0.875rem;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+    
+    .hero-prev,
+    .hero-next {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .hero-prev {
+        left: 0.5rem;
+    }
+    
+    .hero-next {
+        right: 0.5rem;
+    }
+}
+
+@media (max-width: 475px) {
+    .hero-slide .flex.flex-wrap button {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Gradient Backgrounds */
+.hero-slide:nth-child(1) .bg-gradient-to-r {
+    background: linear-gradient(to right, #fef3c7, #d1fae5);
+}
+
+.hero-slide:nth-child(2) .bg-gradient-to-r {
+    background: linear-gradient(to right, #ffedd5, #fef3c7);
+}
+
+.hero-slide:nth-child(3) .bg-gradient-to-r {
+    background: linear-gradient(to right, #dbeafe, #e0e7ff);
+}
+
+/* Touch Swipe Support */
+.hero-carousel-container {
+    touch-action: pan-y;
+}
+
+/* Loading State */
+.hero-slide img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+}
+
+.hero-slide img[src] {
+    background: none;
+}
+

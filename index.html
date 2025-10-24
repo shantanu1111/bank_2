@@ -1,0 +1,2247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCB Bank - Personal Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left Section -->
+                <div class="flex items-center space-x-4">
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <div class="bg-blue-900 text-white px-4 py-2 font-bold text-xl">DCB BANK</div>
+                    </div>
+                    
+                    <!-- Desktop Tab Navigation -->
+                    <div class="hidden lg:flex items-center space-x-2">
+                        <button class="px-6 py-2 bg-yellow-400 rounded-full font-semibold text-sm">Personal</button>
+                        <button class="px-6 py-2 hover:bg-gray-100 rounded-full font-semibold text-sm">Business</button>
+                        <button class="px-6 py-2 hover:bg-gray-100 rounded-full font-semibold text-sm">NRI</button>
+                    </div>
+                </div>
+                
+                <!-- Right Section -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="hidden lg:block text-sm font-medium hover:text-blue-900">About Us</a>
+                    <a href="#" class="hidden lg:block text-sm font-medium hover:text-blue-900">Ways To Bank</a>
+                    <a href="#" class="hidden lg:block text-sm font-medium hover:text-blue-900">Customer Care</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Secondary Navigation -->
+    <div class="bg-blue-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-14">
+                <!-- Menu Items -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium text-blue-900 py-3 px-5 rounded-full bg-white">
+                            Accounts
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="grid grid-cols-3 gap-8 p-10">
+                                <div>
+                                    <h3 class="font-bold text-xl mb-6 text-blue-900">Savings Account</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Happy Savings Account</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Elite Savings Account</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Niyo Savings Account</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB SmartCash Savings Account</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Privilege Savings Account</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Classic Savings Account</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Basic Savings Bank Deposit Account</a></li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-col justify-between">
+                                    <div>
+                                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop" alt="Banking Meeting" class="rounded-2xl w-full h-56 object-cover mb-6">
+                                        <h3 class="font-bold text-xl mb-6 text-blue-900">Current Account</h3>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Business Saver Account</a></li>
+                                            <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Elite Current Account</a></li>
+                                            <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Classic Current Account</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=300&fit=crop" alt="Business People" class="rounded-2xl w-full h-56 object-cover mb-6">
+                                    <h3 class="font-bold text-xl mb-6 text-blue-900">Special Programs</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Special</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB WOW</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Legends</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium hover:text-blue-900 py-3 px-5 rounded-full hover:bg-white">
+                            Deposits
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-2col">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-10">
+                                <div>
+                                    <h3 class="font-bold text-xl mb-6 text-blue-600">Fixed Deposits</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Fixed Deposit</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Tax Saver Fixed Deposit</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Resident Foreign Currency Deposit</a></li>
+                                    </ul>
+                                    <h3 class="font-bold text-xl mb-6 mt-8 text-blue-600">Recurring Deposit</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Pragati Recurring Deposit</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=500&fit=crop" alt="Happy Family" class="rounded-2xl w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium hover:text-blue-900 py-3 px-5 rounded-full hover:bg-white">
+                            Loans
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-2col">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-10">
+                                <div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Gold Loan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Business Loan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Home Loan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Education Loan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Car Loan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Agri Loans</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop" alt="Business Meeting" class="rounded-2xl w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium hover:text-blue-900 py-3 px-5 rounded-full hover:bg-white">
+                            Cards
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-10">
+                                <div>
+                                    <h3 class="font-bold text-xl mb-6 text-blue-600">Debit Card</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB RuPay Platinum Debit Card</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Visa Platinum Debit Card</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB RuPay Platinum Debit Card (Basic)</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Visa Classic Debit Card</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-6 text-blue-600">Travel Card</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Niyo Card</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB TravelSmart Card</a></li>
+                                    </ul>
+                                    <h3 class="font-bold text-xl mb-6 mt-8 text-blue-600">Secured Credit Card</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB PayLess Platinum Card</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB PayLess Select Card</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=500&fit=crop" alt="Travel Woman" class="rounded-2xl w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium hover:text-blue-900 py-3 px-5 rounded-full hover:bg-white">
+                            Insurance
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="grid grid-cols-4 gap-8 p-10">
+                                <div>
+                                    <h3 class="font-bold text-xl mb-6 text-blue-600">Life Insurance</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Endowment Plan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Retirement and Annuity Plan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Child Plan</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Term Insurance Plan</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-6 text-blue-600">General Insurance</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Health Insurance</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Personal Accident Insurance</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Home Insurance</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Vehicle Insurance</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-6 text-blue-600">Social Security Schemes</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Pradhan Mantri Suraksha Bima Yojana (PMSBY)</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=500&h=400&fit=crop" alt="Happy Family" class="rounded-2xl w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium hover:text-blue-900 py-3 px-5 rounded-full hover:bg-white">
+                            Investments
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-2col">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-10">
+                                <div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB EazyBee – Mutual Funds Online</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Smart Trade</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Sovereign Gold Bonds</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> IPO / Rights Issue</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Atal Pension Yojana</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop" alt="Investment Professional" class="rounded-2xl w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium hover:text-blue-900 py-3 px-5 rounded-full hover:bg-white">
+                            Remit
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-2col">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-10">
+                                <div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> DCB Remit</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Money Transfer Services</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop" alt="Remit Services" class="rounded-2xl w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative dropdown-container">
+                        <button class="text-sm font-medium hover:text-blue-900 py-3 px-5 rounded-full hover:bg-white">
+                            Payments
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-2col">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-10">
+                                <div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Bharat Bill Payment System</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Bharat QR Payment Collection Solution</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> UPI Facility</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Direct Tax Payments</a></li>
+                                        <li><a href="#" class="text-base text-gray-700 hover:text-blue-900 flex items-center"><span class="mr-3 text-xl">›</span> Indirect Tax - GST Payments</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=600&h=400&fit=crop" alt="Payment Professional" class="rounded-2xl w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Section -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden lg:block">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </button>
+                    <div class="relative login-dropdown-container">
+                        <button class="flex items-center space-x-2 px-6 py-2 border-2 border-yellow-400 rounded-full font-semibold text-sm bg-yellow-400">
+                            <span>Login</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="login-dropdown-menu">
+                            <div class="py-2">
+                                <a href="#" class="block px-6 py-3 text-base hover:bg-yellow-50 border-b border-gray-200">DCB Personal Internet Banking</a>
+                                <a href="#" class="block px-6 py-3 text-base hover:bg-yellow-50 border-b border-gray-200">DCB Business Internet Banking</a>
+                                <a href="#" class="block px-6 py-3 text-base hover:bg-yellow-50 border-b border-gray-200">DCB Remit</a>
+                                <a href="#" class="block px-6 py-3 text-base hover:bg-yellow-50 border-b border-gray-200">DCB EazyBee Mutual Fund</a>
+                                <a href="#" class="block px-6 py-3 text-base hover:bg-yellow-50 border-b border-gray-200">DCB Zippi Fixed Deposit</a>
+                                <a href="#" class="block px-6 py-3 text-base hover:bg-yellow-50 border-b border-gray-200">DCB My Documents</a>
+                                <a href="#" class="block px-6 py-3 text-base hover:bg-yellow-50">Online Dispute Resolution</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Banner -->
+    <div class="bg-blue-900 text-white py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <marquee class="text-sm text-center">Please note, as per RBI's directive the Bank's website address will soon change to www.dcbbank.com</marquee>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-gradient-to-r from-yellow-50 to-green-50 rounded-3xl overflow-hidden shadow-lg">
+            <div class="grid lg:grid-cols-2 gap-0">
+                <div class="p-8 lg:p-16 flex flex-col justify-center">
+                    <h1 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">DCB EazyBee</h1>
+                    <p class="text-xl text-gray-600 mb-8">Invest in Mutual Funds online anytime, anywhere</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800">Invest Now</button>
+                        <button class="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-full font-semibold hover:bg-blue-50">Know More</button>
+                    </div>
+                </div>
+                <div class="relative h-64 lg:h-auto">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop" alt="Woman using laptop" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Hero Section Carousel -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="relative">
+        <!-- Carousel Container -->
+        <div class="hero-carousel-container overflow-hidden rounded-3xl">
+            <div class="hero-carousel-track flex transition-transform duration-700 ease-out">
+                <!-- Slide 1 -->
+                <div class="hero-slide flex-shrink-0 w-full">
+                    <div class="bg-gradient-to-r from-yellow-50 to-green-50 rounded-3xl overflow-hidden shadow-lg">
+                        <div class="grid lg:grid-cols-2 gap-0">
+                            <div class="p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <h1 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">DCB EazyBee</h1>
+                                <p class="text-xl text-gray-600 mb-8">Invest in Mutual Funds online anytime, anywhere</p>
+                                <div class="flex flex-wrap gap-4">
+                                    <button class="px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors">Invest Now</button>
+                                    <button class="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-full font-semibold hover:bg-blue-50 transition-colors">Know More</button>
+                                </div>
+                            </div>
+                            <div class="relative h-64 lg:h-auto order-1 lg:order-2">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop" alt="Woman using laptop" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide flex-shrink-0 w-full">
+                    <div class="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-3xl overflow-hidden shadow-lg">
+                        <div class="grid lg:grid-cols-2 gap-0">
+                            <div class="p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <h1 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">DCB EazyBee</h1>
+                                <p class="text-xl text-gray-600 mb-8">Invest in Mutual Funds online anytime, anywhere</p>
+                                <div class="flex flex-wrap gap-4">
+                                    <button class="px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors">Invest Now</button>
+                                    <button class="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-full font-semibold hover:bg-blue-50 transition-colors">Know More</button>
+                                </div>
+                            </div>
+                            <div class="relative h-64 lg:h-auto order-1 lg:order-2">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=600&fit=crop" alt="Professional woman" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide flex-shrink-0 w-full">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl overflow-hidden shadow-lg">
+                        <div class="grid lg:grid-cols-2 gap-0">
+                            <div class="p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <h1 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">DCB EazyBee</h1>
+                                <p class="text-xl text-gray-600 mb-8">Invest in Mutual Funds online anytime, anywhere</p>
+                                <div class="flex flex-wrap gap-4">
+                                    <button class="px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors">Invest Now</button>
+                                    <button class="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-full font-semibold hover:bg-blue-50 transition-colors">Know More</button>
+                                </div>
+                            </div>
+                            <div class="relative h-64 lg:h-auto order-1 lg:order-2">
+                                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=600&fit=crop" alt="Business person" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="hero-prev absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 z-10 transition-all">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <button class="hero-next absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 z-10 transition-all">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+
+        <!-- Dots Indicator -->
+        <div class="flex justify-center mt-6 gap-2">
+            <button class="hero-dot w-3 h-3 rounded-full bg-blue-900 transition-all" data-index="0"></button>
+            <button class="hero-dot w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="1"></button>
+            <button class="hero-dot w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="2"></button>
+        </div>
+    </div>
+</section>
+
+    <!-- Products Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Savings Account -->
+            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Savings Account</h3>
+                    </div>
+                </div>
+                <p class="text-blue-600 font-semibold">Earn upto <span class="text-xl">7.10%</span> p.a.</p>
+            </div>
+
+            <!-- Fixed Deposit -->
+            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Fixed Deposit</h3>
+                    </div>
+                </div>
+                <p class="text-blue-600 font-semibold">Earn upto <span class="text-xl">7.20%</span> p.a.</p>
+            </div>
+
+            <!-- Senior Citizens Plus Fixed Deposit -->
+            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Senior Citizens Plus Fixed Deposit</h3>
+                    </div>
+                </div>
+                <p class="text-blue-600 font-semibold">Earn upto <span class="text-xl">7.75%</span> p.a.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300">
+        <div class="p-4">
+            <div class="flex justify-between items-center mb-6">
+                <div class="bg-blue-900 text-white px-4 py-2 font-bold text-xl">DCB BANK</div>
+                <button id="closeMobileMenu" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="flex space-x-2 mb-6">
+                <button class="px-6 py-2 bg-yellow-400 rounded-full font-semibold text-sm">Personal</button>
+                <button class="px-6 py-2 bg-gray-100 rounded-full font-semibold text-sm">Business</button>
+                <button class="px-6 py-2 bg-gray-100 rounded-full font-semibold text-sm">NRI</button>
+            </div>
+            
+            <div class="space-y-1">
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Accounts</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Savings Account</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Current Account</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Special Programs</a>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Deposits</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Fixed Deposit</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Tax Saver Fixed Deposit</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Resident Foreign Currency Deposit</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Pragati Recurring Deposit</a>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Loans</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Gold Loan</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Business Loan</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Home Loan</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Education Loan</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Car Loan</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Agri Loans</a>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Cards</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Debit Card</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Travel Card</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Secured Credit Card</a>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Insurance</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Life Insurance</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> General Insurance</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Social Security Schemes</a>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Investments</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB EazyBee – Mutual Funds Online</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Smart Trade</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Sovereign Gold Bonds</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> IPO / Rights Issue</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Atal Pension Yojana</a>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Remit</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> DCB Remit</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Money Transfer Services</a>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 py-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center mobile-accordion">
+                        <span>Payments</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-accordion-content mt-4 space-y-3 hidden">
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Bharat Bill Payment System</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Bharat QR Payment Collection Solution</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> UPI Facility</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Direct Tax Payments</a>
+                        <a href="#" class="block text-sm pl-4 flex items-center"><span class="mr-2">›</span> Indirect Tax - GST Payments</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 pt-6 border-t border-gray-200 flex justify-around">
+                <a href="#" class="text-sm font-medium">About Us</a>
+                <a href="#" class="text-sm font-medium">Ways to Bank</a>
+                <a href="#" class="text-sm font-medium">Customer Care</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Side Icons (Desktop) -->
+    <div class="hidden lg:block fixed right-6 top-1/2 transform -translate-y-1/2 space-y-4">
+        <button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+        </button>
+        <button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+        </button>
+        <button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+        </button>
+    </div>
+
+
+    <!-- Social Security Schemes Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl overflow-hidden shadow-lg p-8 lg:p-12">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Social Security Schemes</h2>
+                <p class="text-gray-600 mb-6">Enroll in Govt social security schemes at your DCB Bank branch. Update your KYC online through SMS/Email/IVR/WhatsApp Banking/Mobile Banking or visit any DCB Bank branch.</p>
+                <button class="px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800">Apply Now</button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-2xl p-4 shadow-md flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold mb-2">Atal Pension Yojana</div>
+                        <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=200&h=100&fit=crop" alt="Atal Pension Yojana" class="rounded-lg w-full h-20 object-cover">
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 shadow-md flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1559526324-c1f275fbfa32?w=200&h=120&fit=crop" alt="PMJJBY" class="rounded-full w-24 h-24 object-cover">
+                </div>
+                <div class="bg-white rounded-2xl p-4 shadow-md flex items-center justify-center">
+                    <div class="text-center text-xs">
+                        <div class="font-bold text-orange-600 mb-1">Pradhan Mantri</div>
+                        <div class="font-bold text-orange-600">Jeevan Jyoti Bima Yojana</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 shadow-md flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-xs font-bold text-blue-900 mb-1">Pradhan Mantri</div>
+                        <div class="text-xs font-bold text-blue-900">Suraksha Bima Yojana</div>
+                        <div class="w-12 h-12 mx-auto mt-2">
+                            <svg class="w-full h-full text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Account Type Cards Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid md:grid-cols-3 gap-6">
+        <!-- Savings Account Card -->
+        <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
+            <div class="flex items-start mb-4">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg class="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Savings Account</h3>
+                    <p class="text-sm text-gray-600">Earn upto <span class="text-blue-600 font-bold text-xl">7.10%</span> p.a.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Deposit Card -->
+        <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
+            <div class="flex items-start mb-4">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                        <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Fixed Deposit</h3>
+                    <p class="text-sm text-gray-600">Earn upto <span class="text-blue-600 font-bold text-xl">7.20%</span> p.a.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Senior Citizens Card -->
+        <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
+            <div class="flex items-start mb-4">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Senior Citizens Plus Fixed Deposit</h3>
+                    <p class="text-sm text-gray-600">Earn upto <span class="text-purple-600 font-bold text-xl">7.75%</span> p.a.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Product Cards Carousel Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="relative">
+        <!-- Carousel Container -->
+        <div class="carousel-container overflow-hidden">
+            <div class="carousel-track flex transition-transform duration-500 ease-out">
+                <!-- DCB Home Loan Card -->
+                <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="DCB Home Loan" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-gray-800 mb-3">DCB Home Loan</h3>
+                            <p class="text-gray-600 text-sm mb-4">Real fast, real easy upto ₹ 5 Crore</p>
+                            <div class="flex gap-3">
+                                <button class="px-6 py-2 bg-blue-900 text-white rounded-full font-semibold text-sm hover:bg-blue-800">Apply Now</button>
+                                <button class="px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-full font-semibold text-sm hover:bg-gray-50">Know More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DCB Business Saver Current Account Card -->
+                <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop" alt="DCB Business Saver Current Account" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-gray-800 mb-3">DCB Business Saver Current Account</h3>
+                            <p class="text-gray-600 text-sm mb-4">Earn returns on your surplus funds</p>
+                            <div class="flex gap-3">
+                                <button class="px-6 py-2 bg-blue-900 text-white rounded-full font-semibold text-sm hover:bg-blue-800">Apply Now</button>
+                                <button class="px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-full font-semibold text-sm hover:bg-gray-50">Know More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DCB Remit Card -->
+                <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="DCB Remit" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-gray-800 mb-3">DCB Remit</h3>
+                            <p class="text-gray-600 text-sm mb-4">Quickest way to send funds abroad online</p>
+                            <div class="flex gap-3">
+                                <button class="px-6 py-2 bg-blue-900 text-white rounded-full font-semibold text-sm hover:bg-blue-800">Register Now</button>
+                                <button class="px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-full font-semibold text-sm hover:bg-gray-50">Know More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate cards for infinite loop effect -->
+                <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="DCB Home Loan" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-gray-800 mb-3">DCB Home Loan</h3>
+                            <p class="text-gray-600 text-sm mb-4">Real fast, real easy upto ₹ 5 Crore</p>
+                            <div class="flex gap-3">
+                                <button class="px-6 py-2 bg-blue-900 text-white rounded-full font-semibold text-sm hover:bg-blue-800">Apply Now</button>
+                                <button class="px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-full font-semibold text-sm hover:bg-gray-50">Know More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 z-10">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <button class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 z-10">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+
+        <!-- Dots Indicator -->
+        <div class="flex justify-center mt-6 gap-2">
+            <button class="carousel-dot w-3 h-3 rounded-full bg-blue-900 transition-all" data-index="0"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="1"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="2"></button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Calculators Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid lg:grid-cols-12 gap-8">
+        <!-- Left Sidebar - Calculator Menu -->
+        <div class="lg:col-span-3">
+            <div class="bg-white rounded-2xl p-6 shadow-md sticky top-4">
+                <h2 class="text-2xl lg:text-3xl font-bold text-blue-900 mb-2">Calculators</h2>
+                <div class="w-12 h-1 bg-yellow-400 mb-6"></div>
+                
+                <nav class="space-y-1">
+                    <button class="calculator-tab-btn w-full text-left px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors active" data-calculator="gold-loan">
+                        Gold Loan
+                    </button>
+                    <button class="calculator-tab-btn w-full text-left px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors" data-calculator="home-loan">
+                        Home Loan
+                    </button>
+                    <button class="calculator-tab-btn w-full text-left px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors" data-calculator="business-loan">
+                        Business Loan
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Right Content Area -->
+        <div class="lg:col-span-9">
+            <!-- Gold Loan Calculator -->
+            <div class="calculator-content active" id="gold-loan">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-800">Loan To Value Calculator</h3>
+                        <div class="w-12 h-1 bg-yellow-400 mt-2"></div>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-5 gap-0">
+                        <!-- Input Section -->
+                        <div class="lg:col-span-3 bg-blue-50 p-6 lg:p-8">
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Gold Weight (in grams)</label>
+                                    <input type="number" id="goldWeight" placeholder="Enter weight in grams" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Gold Rate (per 10g of 24k)</label>
+                                    <input type="number" id="goldRate" placeholder="Enter rate per 10g" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <button class="calculate-btn px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors">
+                                    Calculate
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Result Section -->
+                        <div class="lg:col-span-2 bg-yellow-50 p-6 lg:p-8 flex flex-col justify-between">
+                            <div class="space-y-6">
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-2">Gold Value</p>
+                                    <p class="text-3xl font-bold text-blue-900">₹ <span id="goldValue">0</span></p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-2">Loan-to-Value</p>
+                                    <p class="text-3xl font-bold text-blue-900">₹ <span id="loanToValue">0</span></p>
+                                </div>
+                            </div>
+                            
+                            <button class="w-full px-6 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors mt-6">
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Loan EMI Calculator -->
+            <div class="calculator-content hidden" id="home-loan">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-800">EMI Calculator</h3>
+                        <div class="w-12 h-1 bg-yellow-400 mt-2"></div>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-5 gap-0">
+                        <!-- Input Section -->
+                        <div class="lg:col-span-3 bg-blue-50 p-6 lg:p-8">
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Loan Amount</label>
+                                    <input type="number" id="loanAmount" placeholder="Enter loan amount" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Loan Interest Rate (%)</label>
+                                    <input type="number" id="interestRate" placeholder="Enter interest rate" step="0.1" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Loan Tenure (years)</label>
+                                    <input type="number" id="loanTenure" placeholder="Enter loan tenure" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <button class="calculate-emi-btn px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors">
+                                    Calculate
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Result Section -->
+                        <div class="lg:col-span-2 bg-yellow-50 p-6 lg:p-8 flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">EMI</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="emiAmount">0</span></p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">Principal Repayment</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="principalAmount">0</span></p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">Total Payment</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="totalPayment">0</span></p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">Total Interest Payment</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="totalInterest">0</span></p>
+                                </div>
+                            </div>
+                            
+                            <button class="w-full px-6 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors mt-6">
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Loan EMI Calculator -->
+            <div class="calculator-content hidden" id="business-loan">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-800">EMI Calculator</h3>
+                        <div class="w-12 h-1 bg-yellow-400 mt-2"></div>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-5 gap-0">
+                        <!-- Input Section -->
+                        <div class="lg:col-span-3 bg-blue-50 p-6 lg:p-8">
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Loan Amount</label>
+                                    <input type="number" id="businessLoanAmount" placeholder="Enter loan amount" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Loan Interest Rate (%)</label>
+                                    <input type="number" id="businessInterestRate" placeholder="Enter interest rate" step="0.1" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-800 font-semibold mb-2">Loan Tenure (years)</label>
+                                    <input type="number" id="businessLoanTenure" placeholder="Enter loan tenure" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                
+                                <button class="calculate-business-emi-btn px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors">
+                                    Calculate
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Result Section -->
+                        <div class="lg:col-span-2 bg-yellow-50 p-6 lg:p-8 flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">EMI</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="businessEmiAmount">0</span></p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">Principal Repayment</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="businessPrincipalAmount">0</span></p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">Total Payment</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="businessTotalPayment">0</span></p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-700 font-medium mb-1">Total Interest Payment</p>
+                                    <p class="text-2xl font-bold text-blue-900">₹<span id="businessTotalInterest">0</span></p>
+                                </div>
+                            </div>
+                            
+                            <button class="w-full px-6 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors mt-6">
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Feature Cards Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid md:grid-cols-3 gap-6">
+        <!-- Bank with Convenience on WhatsApp Card -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-80">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&h=400&fit=crop" alt="Bank with Convenience on WhatsApp" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            </div>
+            
+            <div class="relative h-full flex flex-col justify-end p-8">
+                <div class="transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Bank with Convenience on WhatsApp</h3>
+                    <button class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors inline-flex items-center">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scan QR Codes Safely Card -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-80">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=600&h=400&fit=crop" alt="Scan QR Codes Safely" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            </div>
+            
+            <div class="relative h-full flex flex-col justify-end p-8">
+                <div class="transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Scan QR Codes Safely</h3>
+                    <button class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors inline-flex items-center">
+                        Know More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stay Safe on Public Wi-Fi Card -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-80">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop" alt="Stay Safe on Public Wi-Fi" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            </div>
+            
+            <div class="relative h-full flex flex-col justify-end p-8">
+                <div class="transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Stay Safe on Public Wi-Fi</h3>
+                    <button class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors inline-flex items-center">
+                        Know More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Corporate Social Responsibility Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl overflow-hidden shadow-xl">
+        <div class="grid lg:grid-cols-2 gap-0">
+            <!-- Left Content Section -->
+            <div class="p-8 lg:p-12 flex flex-col justify-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">Helping Our Communities Grow With Us</h2>
+                
+                <div class="space-y-6 mb-8">
+                    <!-- Trees Planted -->
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">1,02,896 Trees</h3>
+                            <p class="text-gray-600">That amount of trees planted</p>
+                        </div>
+                    </div>
+
+                    <!-- Water Conservation -->
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.5 2a3.5 3.5 0 101.665 6.58L8.585 10l-1.42 1.42a3.5 3.5 0 101.414 1.414l8.128-8.127a1 1 0 00-1.414-1.414L10 8.586 8.58 7.165A3.5 3.5 0 005.5 2zM4 5.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">58,128 Metric Tonnes</h3>
+                            <p class="text-gray-600">Reduction/Reuse promoted</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Development -->
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">2,522 Metric Tonnes</h3>
+                            <p class="text-gray-600">People educated promoting self-employment</p>
+                        </div>
+                    </div>
+
+                    <!-- Water Distribution -->
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">9,60,59,895 Liters</h3>
+                            <p class="text-gray-600">Restoration line created & trees impacted</p>
+                        </div>
+                    </div>
+
+                    <!-- Lives Impacted -->
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">6,84,871 Lives</h3>
+                            <p class="text-gray-600">Restoration line created & trees impacted</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors inline-flex items-center w-fit">
+                    Know More
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Right Image Section -->
+            <div class="relative h-64 lg:h-auto">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=800&fit=crop" alt="DCB Corporate Social Responsibility" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-l from-transparent to-green-50/50 lg:to-transparent"></div>
+                
+                <!-- Floating Badge -->
+                <div class="absolute top-8 right-8 bg-white rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform">
+                    <div class="text-center">
+                        <h4 class="text-3xl font-bold text-blue-900 mb-1">CSR</h4>
+                        <p class="text-sm text-gray-600 font-medium">DCB Corporate Social<br>Responsibility</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Trends & Blogs Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex justify-between items-center mb-8">
+        <div>
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">Trends & Blogs</h2>
+            <div class="w-16 h-1 bg-yellow-400 mt-2"></div>
+        </div>
+        <button class="px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-full font-semibold text-sm hover:bg-gray-50 transition-colors">
+            View All
+        </button>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Featured Blog (Large) -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+            <div class="relative h-96 lg:h-full">
+                <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop" alt="Mobile Banking or Internet Banking" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <div class="transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">
+                        <span class="inline-block px-4 py-1 bg-blue-600 text-white text-sm font-semibold rounded-full mb-4">
+                            Banking Tips
+                        </span>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-white mb-3">Mobile Banking or Internet Banking: What is your pick?</h3>
+                        <button class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors inline-flex items-center mt-4">
+                            Learn More
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Blog List -->
+        <div class="space-y-6">
+            <!-- Blog Item 1 -->
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div class="flex flex-col sm:flex-row">
+                    <div class="sm:w-40 h-48 sm:h-auto flex-shrink-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=300&fit=crop" alt="DCB Happy Savings Account" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-center">
+                        <span class="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full mb-3 w-fit">
+                            Savings
+                        </span>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-900 transition-colors">DCB Happy Savings Account: A Smarter Way to Save and Grow</h4>
+                        <p class="text-sm text-gray-600 mb-3">Learn More</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Item 2 -->
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div class="flex flex-col sm:flex-row">
+                    <div class="sm:w-40 h-48 sm:h-auto flex-shrink-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=300&fit=crop" alt="A Guide to Home Loan Process in India" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-center">
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full mb-3 w-fit">
+                            Home Loan
+                        </span>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-900 transition-colors">A Guide to Home Loan Process in India</h4>
+                        <p class="text-sm text-gray-600 mb-3">Learn More</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Item 3 -->
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div class="flex flex-col sm:flex-row">
+                    <div class="sm:w-40 h-48 sm:h-auto flex-shrink-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop" alt="Secure Your Banking Transactions" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-center">
+                        <span class="inline-block px-3 py-1 bg-red-100 text-red-700 text-xs font-semibold rounded-full mb-3 w-fit">
+                            Security
+                        </span>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-900 transition-colors">Secure Your Banking Transactions, Combat Fraud and Cyber Security Measures</h4>
+                        <p class="text-sm text-gray-600 mb-3">Learn More</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gradient-to-b from-gray-50 to-white py-12 mt-16">
+    <!-- Contact Information Bar -->
+    <div class="bg-blue-50 border-y border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="grid md:grid-cols-3 gap-6 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start">
+                    <svg class="w-5 h-5 text-blue-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <div>
+                        <p class="text-sm text-gray-600">DCB Customer Care</p>
+                        <p class="font-bold text-blue-900">1800 208 8777 / 022 6899 8777</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start">
+                    <svg class="w-5 h-5 text-blue-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    <div>
+                        <p class="text-sm text-gray-600">Email</p>
+                        <p class="font-bold text-blue-900">customercare@dcbbank.com</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start">
+                    <p class="text-sm text-gray-700">
+                        <span class="font-semibold">Download DCB Bank App</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <!-- About Us -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">About Us</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Overview</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Board of Directors</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Key Governance</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Awards</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Investor Relations</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">CSR</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Media Centre</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Bank & Developer</a></li>
+                </ul>
+            </div>
+
+            <!-- Personal -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Personal</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Savings Account</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Fixed Deposits</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Cards</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Loans</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Home Loan</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Education Loan</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Insurance</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Investments</a></li>
+                </ul>
+            </div>
+
+            <!-- Business -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Business</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Current Account</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Business Banking</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Trade Finance</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Cash Management</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Loans</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Investments</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Payments</a></li>
+                </ul>
+            </div>
+
+            <!-- Ways to Bank -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Ways to Bank</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Branch Banking</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Personal Internet Banking</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Business Internet Banking</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Mobile Banking</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Phone Banking</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">ATM / Debit Card</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Ombudsman Advice Facility</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">RBI - Consumer Education & Protection Cell</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Care -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Customer Care</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Forms</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Service Request</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Service Charges & Fees</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Self Service</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Apply for Life & Health Insurance Policy</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Support For Persons With Disabilities</a></li>
+                </ul>
+            </div>
+
+            <!-- Regulatory -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Regulatory</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">IRAC</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Auction Sale Notices</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Unclaimed Deposits (DEAF)</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">IEPF</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">RBI Advisory</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Lending Rates</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Deposit Rates</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Frauds</a></li>
+                </ul>
+            </div>
+
+            <!-- NRI -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">NRI</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Accounts</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Deposits</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Remit</a></li>
+                </ul>
+            </div>
+
+            <!-- Trends & Blogs -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Trends & Blogs</h3>
+            </div>
+
+            <!-- Rates -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Rates</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Fixed Account Deposit Rate</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Recurring Deposit Rate</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Fixed Deposit Rates</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Home Loan Rates</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Lending Rates</a></li>
+                </ul>
+            </div>
+
+            <!-- Fees & Charges -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Fees & Charges</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Service Charges</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Locker Charges</a></li>
+                </ul>
+            </div>
+
+            <!-- Calculators -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">Calculators</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Gold Loan</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Home Loan</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Business Loan</a></li>
+                </ul>
+            </div>
+
+            <!-- More -->
+            <div>
+                <h3 class="font-bold text-blue-900 mb-4">More</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Interest on Savings Bank Deposit Account</a></li>
+                    <li><a href="#" class="text-sm text-gray-600 hover:text-blue-900 transition-colors">Refer a Friend</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media & App Downloads -->
+    <div class="bg-blue-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Social Media Links -->
+                <div class="flex items-center gap-4">
+                    <span class="text-sm font-medium">Follow us:</span>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- App Download Buttons -->
+                <div class="flex items-center gap-4">
+                    <span class="text-sm font-medium hidden md:block">Download DCB Bank App:</span>
+                    <div class="flex gap-3">
+                        <a href="#" class="hover:opacity-80 transition-opacity">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-10">
+                        </a>
+                        <a href="#" class="hover:opacity-80 transition-opacity">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-10">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright & Legal -->
+    <div class="bg-gray-100 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm text-gray-600">
+                <p class="mb-2">© 2025 DCB Bank Limited. All rights reserved.</p>
+                <p class="mb-4">DCB Bank Ltd is registered with DICGC. Deposits are insured upto ₹ 5,00,000 (Rupees Five Lakhs) per depositor as per DICGC norms.</p>
+                <div class="flex flex-wrap justify-center gap-4 mb-4">
+                    <a href="#" class="hover:text-blue-900 transition-colors">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-blue-900 transition-colors">Terms & Conditions</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-blue-900 transition-colors">Security</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-blue-900 transition-colors">Sitemap</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-blue-900 transition-colors">Disclaimer</a>
+                </div>
+                <div class="flex justify-center gap-4 items-center">
+                    <img src="https://www.dcbbank.com/images/footer-icons/iso.png" alt="ISO Certified" class="h-12">
+                    <img src="https://www.dcbbank.com/images/footer-icons/pci-dss.png" alt="PCI DSS Certified" class="h-12">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Mobile Accordion
+        const accordions = document.querySelectorAll('.mobile-accordion');
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', () => {
+                const content = accordion.nextElementSibling;
+                const icon = accordion.querySelector('svg');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Desktop Dropdown
+        const dropdownContainers = document.querySelectorAll('.dropdown-container');
+        dropdownContainers.forEach(container => {
+            container.addEventListener('mouseenter', () => {
+                const menu = container.querySelector('.dropdown-menu');
+                if (menu) {
+                    menu.classList.add('show');
+                }
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                const menu = container.querySelector('.dropdown-menu');
+                if (menu) {
+                    menu.classList.remove('show');
+                }
+            });
+        });
+
+
+        // Product Carousel
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+const prevBtn = document.querySelector('.carousel-prev');
+const nextBtn = document.querySelector('.carousel-next');
+const dots = document.querySelectorAll('.carousel-dot');
+
+let currentIndex = 0;
+let slideWidth = carouselSlides[0].offsetWidth;
+let autoPlayInterval;
+
+// Update slide width on resize
+window.addEventListener('resize', () => {
+    slideWidth = carouselSlides[0].offsetWidth;
+    updateCarousel();
+});
+
+function updateCarousel() {
+    const offset = -currentIndex * slideWidth;
+    carouselTrack.style.transform = `translateX(${offset}px)`;
+    
+    // Update dots
+    dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active', 'bg-blue-900', 'w-8');
+            dot.classList.remove('bg-gray-300', 'w-3');
+        } else {
+            dot.classList.remove('active', 'bg-blue-900', 'w-8');
+            dot.classList.add('bg-gray-300', 'w-3');
+        }
+    });
+}
+
+function nextSlide() {
+    currentIndex++;
+    if (currentIndex >= 3) {
+        currentIndex = 0;
+    }
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = 2;
+    }
+    updateCarousel();
+}
+
+// Event Listeners
+nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoPlay();
+});
+
+prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoPlay();
+});
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+        resetAutoPlay();
+    });
+});
+
+// Auto-play functionality
+function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 4000);
+}
+
+function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+}
+
+// Start auto-play
+startAutoPlay();
+
+// Pause on hover
+carouselTrack.addEventListener('mouseenter', () => {
+    clearInterval(autoPlayInterval);
+});
+
+carouselTrack.addEventListener('mouseleave', () => {
+    startAutoPlay();
+});
+
+
+// Calculator Tab Switching
+const calculatorTabs = document.querySelectorAll('.calculator-tab-btn');
+const calculatorContents = document.querySelectorAll('.calculator-content');
+
+calculatorTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const targetCalculator = tab.getAttribute('data-calculator');
+        
+        // Remove active class from all tabs
+        calculatorTabs.forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        tab.classList.add('active');
+        
+        // Hide all calculator contents
+        calculatorContents.forEach(content => {
+            content.classList.remove('active');
+            content.classList.add('hidden');
+        });
+        
+        // Show target calculator content
+        const targetContent = document.getElementById(targetCalculator);
+        targetContent.classList.remove('hidden');
+        targetContent.classList.add('active');
+    });
+});
+
+// Gold Loan Calculator
+const calculateBtn = document.querySelector('.calculate-btn');
+if (calculateBtn) {
+    calculateBtn.addEventListener('click', () => {
+        const weight = parseFloat(document.getElementById('goldWeight').value) || 0;
+        const rate = parseFloat(document.getElementById('goldRate').value) || 0;
+        
+        // Calculate gold value
+        const goldValue = (weight / 10) * rate;
+        
+        // Calculate loan to value (typically 75% of gold value)
+        const loanToValue = goldValue * 0.75;
+        
+        // Update results with animation
+        const goldValueElement = document.getElementById('goldValue');
+        const loanToValueElement = document.getElementById('loanToValue');
+        
+        animateValue(goldValueElement, 0, goldValue, 1000);
+        animateValue(loanToValueElement, 0, loanToValue, 1000);
+    });
+}
+
+// Home Loan EMI Calculator
+const calculateEmiBtn = document.querySelector('.calculate-emi-btn');
+if (calculateEmiBtn) {
+    calculateEmiBtn.addEventListener('click', () => {
+        const principal = parseFloat(document.getElementById('loanAmount').value) || 0;
+        const annualRate = parseFloat(document.getElementById('interestRate').value) || 0;
+        const years = parseFloat(document.getElementById('loanTenure').value) || 0;
+        
+        // Calculate EMI
+        const monthlyRate = annualRate / 12 / 100;
+        const months = years * 12;
+        
+        let emi = 0;
+        if (monthlyRate > 0) {
+            emi = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / 
+                  (Math.pow(1 + monthlyRate, months) - 1);
+        }
+        
+        const totalPayment = emi * months;
+        const totalInterest = totalPayment - principal;
+        
+        // Update results with animation
+        animateValue(document.getElementById('emiAmount'), 0, emi, 1000);
+        animateValue(document.getElementById('principalAmount'), 0, principal, 1000);
+        animateValue(document.getElementById('totalPayment'), 0, totalPayment, 1000);
+        animateValue(document.getElementById('totalInterest'), 0, totalInterest, 1000);
+    });
+}
+
+// Business Loan EMI Calculator
+const calculateBusinessEmiBtn = document.querySelector('.calculate-business-emi-btn');
+if (calculateBusinessEmiBtn) {
+    calculateBusinessEmiBtn.addEventListener('click', () => {
+        const principal = parseFloat(document.getElementById('businessLoanAmount').value) || 0;
+        const annualRate = parseFloat(document.getElementById('businessInterestRate').value) || 0;
+        const years = parseFloat(document.getElementById('businessLoanTenure').value) || 0;
+        
+        // Calculate EMI
+        const monthlyRate = annualRate / 12 / 100;
+        const months = years * 12;
+        
+        let emi = 0;
+        if (monthlyRate > 0) {
+            emi = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / 
+                  (Math.pow(1 + monthlyRate, months) - 1);
+        }
+        
+        const totalPayment = emi * months;
+        const totalInterest = totalPayment - principal;
+        
+        // Update results with animation
+        animateValue(document.getElementById('businessEmiAmount'), 0, emi, 1000);
+        animateValue(document.getElementById('businessPrincipalAmount'), 0, principal, 1000);
+        animateValue(document.getElementById('businessTotalPayment'), 0, totalPayment, 1000);
+        animateValue(document.getElementById('businessTotalInterest'), 0, totalInterest, 1000);
+    });
+}
+
+// Animate number counting
+function animateValue(element, start, end, duration) {
+    if (!element) return;
+    
+    const startTime = performance.now();
+    const startValue = start;
+    const endValue = end;
+    
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const currentValue = startValue + (endValue - startValue) * easeOutQuart;
+        
+        element.textContent = formatNumber(currentValue);
+        element.classList.add('result-updated');
+        
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            setTimeout(() => {
+                element.classList.remove('result-updated');
+            }, 500);
+        }
+    }
+    
+    requestAnimationFrame(update);
+}
+
+// Format number with Indian numbering system
+function formatNumber(num) {
+    const roundedNum = Math.round(num);
+    return roundedNum.toLocaleString('en-IN');
+}
+
+// Input validation - only allow numbers and decimal
+const numberInputs = document.querySelectorAll('input[type="number"]');
+numberInputs.forEach(input => {
+    input.addEventListener('keypress', (e) => {
+        const char = String.fromCharCode(e.which);
+        if (!/[0-9.]/.test(char)) {
+            e.preventDefault();
+        }
+    });
+    
+    // Add focus animation
+    input.addEventListener('focus', () => {
+        input.parentElement.style.transform = 'translateY(-2px)';
+        input.parentElement.style.transition = 'transform 0.3s ease';
+    });
+    
+    input.addEventListener('blur', () => {
+        input.parentElement.style.transform = 'translateY(0)';
+    });
+});
+
+
+// CSR Stats Counter Animation on Scroll
+const csrSection = document.querySelector('.csr-section');
+
+if (csrSection) {
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px'
+    };
+
+    const csrObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Trigger counter animation for all stat numbers
+                const statNumbers = entry.target.querySelectorAll('.flex.items-start h3');
+                statNumbers.forEach((stat, index) => {
+                    setTimeout(() => {
+                        stat.style.opacity = '0';
+                        setTimeout(() => {
+                            stat.style.transition = 'opacity 0.5s ease';
+                            stat.style.opacity = '1';
+                        }, 100);
+                    }, index * 100);
+                });
+                
+                csrObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    csrObserver.observe(csrSection);
+}
+
+// Trends & Blogs Section - Scroll Animation
+const blogItems = document.querySelectorAll('.blog-item');
+
+const blogObserverOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const blogObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateX(-30px)';
+            
+            setTimeout(() => {
+                entry.target.style.transition = 'all 0.6s ease';
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+            }, 100);
+            
+            blogObserver.unobserve(entry.target);
+        }
+    });
+}, blogObserverOptions);
+
+blogItems.forEach(item => {
+    blogObserver.observe(item);
+});
+
+// Featured Blog Click Handler
+const featuredBlog = document.querySelector('.featured-blog');
+if (featuredBlog) {
+    featuredBlog.addEventListener('click', (e) => {
+        if (!e.target.closest('button')) {
+            // Handle featured blog click
+            console.log('Featured blog clicked');
+        }
+    });
+}
+
+// Blog Items Click Handler
+blogItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Add ripple effect
+        const ripple = document.createElement('div');
+        ripple.style.position = 'absolute';
+        ripple.style.width = '20px';
+        ripple.style.height = '20px';
+        ripple.style.background = 'rgba(59, 130, 246, 0.5)';
+        ripple.style.borderRadius = '50%';
+        ripple.style.transform = 'scale(0)';
+        ripple.style.animation = 'ripple 0.6s ease-out';
+        
+        item.style.position = 'relative';
+        item.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+});
+
+// Add ripple animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes ripple {
+        to {
+            transform: scale(20);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+
+
+// Scroll to Top Button
+const scrollToTopBtn = document.createElement('button');
+scrollToTopBtn.className = 'scroll-to-top';
+scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
+scrollToTopBtn.innerHTML = `
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+`;
+document.body.appendChild(scrollToTopBtn);
+
+// Show/Hide Scroll to Top Button
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+});
+
+// Smooth Scroll to Top
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Footer Links - Add Analytics Tracking (placeholder)
+const footerLinks = document.querySelectorAll('footer a');
+footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Add analytics tracking here
+        const linkText = link.textContent.trim();
+        console.log('Footer link clicked:', linkText);
+    });
+});
+
+// Lazy Load Footer Images
+const footerImages = document.querySelectorAll('footer img');
+const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            }
+            imageObserver.unobserve(img);
+        }
+    });
+}, {
+    rootMargin: '50px'
+});
+
+footerImages.forEach(img => {
+    imageObserver.observe(img);
+});
+
+// Social Media Click Tracking
+const socialLinks = document.querySelectorAll('footer .w-10.h-10');
+socialLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Track social media clicks
+        console.log('Social media clicked');
+    });
+});
+
+// App Download Click Tracking
+const appDownloadLinks = document.querySelectorAll('footer img[alt*="Store"]');
+appDownloadLinks.forEach(link => {
+    link.parentElement.addEventListener('click', (e) => {
+        const platform = link.alt.includes('Google') ? 'Google Play' : 'App Store';
+        console.log('App download clicked:', platform);
+    });
+});
+
+// Newsletter Subscription (if you add it later)
+function subscribeNewsletter(email) {
+    // Add newsletter subscription logic
+    console.log('Newsletter subscription:', email);
+}
+
+// Footer Animation on Scroll
+const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+const footerSections = document.querySelectorAll('footer > div');
+footerSections.forEach(section => {
+    footerObserver.observe(section);
+});
+
+// Copyright Year Auto Update
+const currentYear = new Date().getFullYear();
+const copyrightText = document.querySelector('footer .text-center p');
+if (copyrightText && copyrightText.textContent.includes('2025')) {
+    copyrightText.textContent = copyrightText.textContent.replace('2025', currentYear);
+}
+
+// Keyboard Navigation Enhancement
+document.addEventListener('keydown', (e) => {
+    // Add keyboard shortcuts for footer navigation
+    if (e.ctrlKey && e.key === 'Home') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
+
+
+// Hero Carousel
+const heroCarouselTrack = document.querySelector('.hero-carousel-track');
+const heroSlides = document.querySelectorAll('.hero-slide');
+const heroPrevBtn = document.querySelector('.hero-prev');
+const heroNextBtn = document.querySelector('.hero-next');
+const heroDots = document.querySelectorAll('.hero-dot');
+
+let heroCurrentIndex = 0;
+let heroSlideWidth = heroSlides[0].offsetWidth;
+let heroAutoPlayInterval;
+let heroTouchStartX = 0;
+let heroTouchEndX = 0;
+
+// Update slide width on resize
+window.addEventListener('resize', () => {
+    heroSlideWidth = heroSlides[0].offsetWidth;
+    updateHeroCarousel();
+});
+
+function updateHeroCarousel() {
+    const offset = -heroCurrentIndex * heroSlideWidth;
+    heroCarouselTrack.style.transform = `translateX(${offset}px)`;
+    
+    // Update dots
+    heroDots.forEach((dot, index) => {
+        if (index === heroCurrentIndex) {
+            dot.classList.add('active', 'bg-blue-900', 'w-8');
+            dot.classList.remove('bg-gray-300', 'w-3');
+        } else {
+            dot.classList.remove('active', 'bg-blue-900', 'w-8');
+            dot.classList.add('bg-gray-300', 'w-3');
+        }
+    });
+    
+    // Reset animations
+    const currentSlide = heroSlides[heroCurrentIndex];
+    const elements = currentSlide.querySelectorAll('h1, p, .flex.flex-wrap');
+    elements.forEach((el, index) => {
+        el.style.animation = 'none';
+        setTimeout(() => {
+            el.style.animation = '';
+        }, 10);
+    });
+}
+
+function nextHeroSlide() {
+    heroCurrentIndex++;
+    if (heroCurrentIndex >= heroSlides.length) {
+        heroCurrentIndex = 0;
+    }
+    updateHeroCarousel();
+}
+
+function prevHeroSlide() {
+    heroCurrentIndex--;
+    if (heroCurrentIndex < 0) {
+        heroCurrentIndex = heroSlides.length - 1;
+    }
+    updateHeroCarousel();
+}
+
+// Event Listeners
+heroNextBtn.addEventListener('click', () => {
+    nextHeroSlide();
+    resetHeroAutoPlay();
+});
+
+heroPrevBtn.addEventListener('click', () => {
+    prevHeroSlide();
+    resetHeroAutoPlay();
+});
+
+heroDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        heroCurrentIndex = index;
+        updateHeroCarousel();
+        resetHeroAutoPlay();
+    });
+});
+
+// Touch/Swipe Support
+const heroCarouselContainer = document.querySelector('.hero-carousel-container');
+
+heroCarouselContainer.addEventListener('touchstart', (e) => {
+    heroTouchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+heroCarouselContainer.addEventListener('touchend', (e) => {
+    heroTouchEndX = e.changedTouches[0].screenX;
+    handleHeroSwipe();
+}, { passive: true });
+
+function handleHeroSwipe() {
+    const swipeThreshold = 50;
+    const diff = heroTouchStartX - heroTouchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swiped left
+            nextHeroSlide();
+        } else {
+            // Swiped right
+            prevHeroSlide();
+        }
+        resetHeroAutoPlay();
+    }
+}
+
+// Auto-play functionality
+function startHeroAutoPlay() {
+    heroAutoPlayInterval = setInterval(nextHeroSlide, 5000);
+}
+
+function resetHeroAutoPlay() {
+    clearInterval(heroAutoPlayInterval);
+    startHeroAutoPlay();
+}
+
+// Start auto-play
+startHeroAutoPlay();
+
+// Pause on hover
+heroCarouselContainer.addEventListener('mouseenter', () => {
+    clearInterval(heroAutoPlayInterval);
+});
+
+heroCarouselContainer.addEventListener('mouseleave', () => {
+    startHeroAutoPlay();
+});
+
+// Pause when tab is not visible
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        clearInterval(heroAutoPlayInterval);
+    } else {
+        startHeroAutoPlay();
+    }
+});
+    </script>
+</body>
+</html>
