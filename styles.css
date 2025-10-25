@@ -1811,3 +1811,280 @@ footer img {
     background: none;
 }
 
+
+/* Footer Section - Dark Blue Background */
+footer {
+    position: relative;
+    background: #1e3a8a;
+}
+
+/* Contact Bar - Dark Blue */
+footer > div:first-child {
+    background: #1e3a8a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Footer Content - Dark Blue */
+footer > div:nth-child(2) {
+    background: #1e3a8a;
+}
+
+/* Footer Text Colors - White/Light */
+footer h3 {
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #fbbf24;
+}
+
+footer ul li a {
+    color: #d1d5db;
+    font-size: 0.875rem;
+}
+
+footer ul li a:hover {
+    color: #ffffff;
+}
+
+/* Contact Info - Light Text */
+footer .font-bold {
+    color: #ffffff;
+}
+
+footer .text-gray-600 {
+    color: #d1d5db;
+}
+
+footer .text-gray-700 {
+    color: #e5e7eb;
+}
+
+/* Contact Icons - White */
+footer svg {
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+footer .flex.items-center:hover svg {
+    transform: scale(1.2);
+}
+
+/* Footer Links Hover Effect */
+footer a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fbbf24;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* Social Media Section - Darker Blue */
+footer .bg-blue-900 {
+    background: #1e40af;
+}
+
+/* Social Media Icons */
+footer .w-10.h-10 {
+    transition: all 0.3s ease;
+}
+
+footer .w-10.h-10:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* App Download Buttons */
+footer img[alt*="Store"] {
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+footer img[alt*="Store"]:hover {
+    transform: scale(1.05);
+}
+
+/* Copyright Section - Slightly Lighter Blue */
+footer > div:last-child {
+    background: #1e40af;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer .text-center {
+    color: #d1d5db;
+}
+
+footer .text-center p {
+    color: #d1d5db;
+}
+
+footer .text-center a {
+    color: #d1d5db;
+}
+
+footer .text-center a:hover {
+    color: #ffffff;
+}
+
+/* Certification Badges */
+footer img[alt*="Certified"] {
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+footer img[alt*="Certified"]:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Footer Column Hover */
+footer .grid > div {
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+footer .grid > div:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Responsive Footer Grid */
+@media (max-width: 768px) {
+    footer .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    footer h3 {
+        font-size: 0.875rem;
+    }
+    
+    footer a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    footer .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Animation on Scroll */
+footer .grid > div {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+footer .grid > div:nth-child(1) { animation-delay: 0.1s; }
+footer .grid > div:nth-child(2) { animation-delay: 0.15s; }
+footer .grid > div:nth-child(3) { animation-delay: 0.2s; }
+footer .grid > div:nth-child(4) { animation-delay: 0.25s; }
+footer .grid > div:nth-child(5) { animation-delay: 0.3s; }
+footer .grid > div:nth-child(6) { animation-delay: 0.35s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: #1e40af;
+}
+
+/* Print Styles */
+@media print {
+    footer .bg-blue-900,
+    footer .scroll-to-top {
+        display: none;
+    }
+}
+
+/* Accessibility - Focus States */
+footer a:focus,
+footer button:focus {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Legal Links Separator */
+footer span {
+    color: #9ca3af;
+}
+
+footer {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+}
+
+@media (min-width: 640px) {
+    footer {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        width: calc(100% + 3rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        width: calc(100% + 4rem);
+    }
+}
