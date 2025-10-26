@@ -1,25 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview</title>
-    <link rel="stylesheet" href="overview.css">
-</head>
-<body>
-    <header>
-        <h1>Overview</h1>
-    </header>
-    
-    <main>
-        <section class="content">
-            <p>Welcome to Overview page.</p>
-            <!-- Add your content here -->
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Bank. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="overview.css">
+
+<!-- Breadcrumb -->
+<div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div class="flex items-center text-sm text-gray-600">
+            <a href="#" class="hover:text-blue-900">Home</a>
+            <span class="mx-2">/</span>
+            <a href="#" class="hover:text-blue-900">About Us</a>
+            <span class="mx-2">/</span>
+            <span class="text-blue-900 font-medium">Overview</span>
+        </div>
+    </div>
+</div>
+
+<!-- Overview Content Section -->
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Page Title -->
+        <div class="mb-8">
+            <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Overview</h1>
+            <div class="w-16 h-1 bg-yellow-400"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Left Content - Text -->
+            <div class="lg:col-span-2 space-y-6">
+                <p class="text-gray-700 leading-relaxed">
+                    DCB Bank is a new generation private sector bank with 468 branches (as on 30th September 2025) across India. It is a scheduled commercial bank regulated by the Reserve Bank of India. It is professionally managed and governed. DCB Bank has contemporary technology and infrastructure including state of the art internet banking for personal as well as business banking customers.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    DCB Bank's business segments are Retail, micro-SME, SME, mid-Corporate, Agriculture, Commodities, Government, Public Sector, Indian Banks, Co-operative Banks and Non Banking Finance Companies (NBFC). DCB Bank has approximately two and a half million customers.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    The Bank's network of state-of-the-art, customer friendly branches are situated across Andhra Pradesh, Bihar, Chhattisgarh, Daman, Delhi/ NCR, Goa, Gujarat, Haryana, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Odisha, Punjab, Rajasthan, Sikassa, Tamil Nadu, Telangana, Uttar Pradesh, Uttarakhand and West Bengal.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    DCB Bank has deep roots in India since its inception in 1930s. Its promoter and promoter group the Aga Khan Fund for Economic Development (AKFED) & Platinum Jubilee Investments Ltd. holds below 15% stake. AKFED is an international development enterprise. It is dedicated to promoting entrepreneurship and building economically sound companies.
+                </p>
+
+                <!-- Download Brochure Card -->
+                <div class="mt-8">
+                    <a href="#" class="inline-flex items-center px-6 py-4 bg-white border-2 border-blue-900 rounded-xl hover:bg-blue-50 transition-colors group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                            <svg class="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-blue-900 font-semibold">Click here to download DCB</p>
+                            <p class="text-blue-900 font-semibold">Bank corporate brochure</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Content - Image -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-24">
+                    <img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=600&h=400&fit=crop" alt="DCB Bank Branch" class="w-full h-auto rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
