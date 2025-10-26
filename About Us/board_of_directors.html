@@ -1,25 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board of Directors</title>
-    <link rel="stylesheet" href="board_of_directors.css">
-</head>
-<body>
-    <header>
-        <h1>Board of Directors</h1>
-    </header>
-    
-    <main>
-        <section class="content">
-            <p>Welcome to Board of Directors page.</p>
-            <!-- Add your content here -->
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Bank. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="board-of-directors.css">
+
+<!-- Breadcrumb -->
+<div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div class="flex items-center text-sm text-gray-600">
+            <a href="#" class="hover:text-blue-900">Home</a>
+            <span class="mx-2">/</span>
+            <a href="#" class="hover:text-blue-900">About Us</a>
+            <span class="mx-2">/</span>
+            <span class="text-blue-900 font-medium">Board of Directors</span>
+        </div>
+    </div>
+</div>
+
+<!-- Board of Directors Content Section -->
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Page Title -->
+        <div class="mb-12">
+            <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Board of Directors</h1>
+            <div class="w-16 h-1 bg-yellow-400"></div>
+        </div>
+
+        <!-- Directors Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Director 1 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" alt="Mr. Praveen Kutty" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Praveen Kutty</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Managing Director and Chief Executive Officer (CEO)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 2 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" alt="Mr. Krishnan Sridhar Seshadri" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Krishnan Sridhar Seshadri</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Whole Time Director (Executive Director)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 3 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Mr. Nasser Munjee" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Nasser Munjee</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Non-Executive (Non-Independent) Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 4 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-yellow-50 to-amber-50">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" alt="Mr. Tarun Balram" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Tarun Balram</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Independent Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 5 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" alt="Mr. Amyn Jassani" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Amyn Jassani</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Independent Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 6 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" alt="Mr. Thiyagarajan Kumar" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Thiyagarajan Kumar</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Independent Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 7 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=400&fit=crop" alt="Mr. Somasundaram PR" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Somasundaram PR</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Independent Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 8 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-pink-50 to-green-50">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" alt="Ms. Lakshmy Chandrasekaran" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Ms. Lakshmy Chandrasekaran</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Independent Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 9 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop" alt="Mr. Nadir Bhalwani" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Nadir Bhalwani</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Non-Executive (Non-Independent) Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director 10 -->
+            <div class="director-card group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=400&h=400&fit=crop" alt="Mr. Balu Srinivasan" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Mr. Balu Srinivasan</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Independent Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
