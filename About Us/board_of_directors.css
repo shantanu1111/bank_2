@@ -1,48 +1,161 @@
-/* Styles for Board of Directors */
+/* Board of Directors Page Styles */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Director Card */
+.director-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+.director-card:nth-child(1) { animation-delay: 0.1s; }
+.director-card:nth-child(2) { animation-delay: 0.15s; }
+.director-card:nth-child(3) { animation-delay: 0.2s; }
+.director-card:nth-child(4) { animation-delay: 0.25s; }
+.director-card:nth-child(5) { animation-delay: 0.3s; }
+.director-card:nth-child(6) { animation-delay: 0.35s; }
+.director-card:nth-child(7) { animation-delay: 0.4s; }
+.director-card:nth-child(8) { animation-delay: 0.45s; }
+.director-card:nth-child(9) { animation-delay: 0.5s; }
+.director-card:nth-child(10) { animation-delay: 0.55s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+/* Director Card Hover Effect */
+.director-card > div {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header h1 {
-    font-size: 2rem;
+.director-card:hover > div {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+/* Director Image Container */
+.director-card .aspect-square {
+    position: relative;
 }
 
-.content {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.director-card .aspect-square::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+.director-card:hover .aspect-square::after {
+    opacity: 1;
 }
 
-/* Add your custom styles below */
+/* Director Image Zoom */
+.director-card img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.director-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Director Name */
+.director-card h3 {
+    transition: color 0.3s ease;
+}
+
+.director-card:hover h3 {
+    color: #1e3a8a;
+}
+
+/* Director Title */
+.director-card p {
+    line-height: 1.5;
+}
+
+/* Card Border Animation */
+.director-card > div {
+    border: 2px solid #e5e7eb;
+}
+
+.director-card:hover > div {
+    border-color: #3b82f6;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+    .director-card:nth-child(n) {
+        animation-delay: 0.1s;
+    }
+}
+
+@media (max-width: 640px) {
+    .director-card {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .director-card > div {
+        margin-bottom: 0;
+    }
+}
+
+/* Page Title */
+.board-title {
+    position: relative;
+}
+
+.board-title .w-16 {
+    animation: expandWidth 0.8s ease;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 4rem;
+    }
+}
+
+/* Aspect Ratio Square */
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+/* Loading State for Images */
+.director-card img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+}
+
+.director-card img[src] {
+    background: none;
+}
+
+/* Print Styles */
+@media print {
+    .director-card:hover > div {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .director-card img {
+        transform: none;
+    }
+}
+
+/* Accessibility */
+.director-card:focus-within > div {
+    outline: 3px solid #fbbf24;
+    outline-offset: 3px;
+}
