@@ -2088,3 +2088,63 @@ footer {
         width: calc(100% + 4rem);
     }
 }
+
+
+/* Login Dropdown Styles */
+.login-dropdown-container {
+    position: relative;
+}
+
+.login-dropdown-container button {
+    font-size: 0.875rem;
+}
+
+/* Mobile Login Button Positioning */
+@media (max-width: 1024px) {
+    .login-dropdown-container button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .login-dropdown-container button span {
+        display: inline;
+    }
+}
+
+@media (max-width: 640px) {
+    .login-dropdown-container button {
+        padding: 0.5rem 0.875rem;
+    }
+}
+
+.login-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #fffef0;
+    border: 3px solid #fbbf24;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    min-width: 320px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.login-dropdown-container:hover .login-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-dropdown-menu a {
+    transition: background-color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .login-dropdown-menu {
+        right: -20px;
+        min-width: 280px;
+    }
+}
